@@ -1,6 +1,5 @@
 import { type ChatSession, type EnhancedGenerateContentResponse, type GenerateContentResult, type GenerativeModel, GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from '@google/generative-ai';
 
-const API_KEY: string = 'AIzaSyAXZi3_lyyiBSqrOOFlNayjnq1-8eDieK4';
 const genAI: GoogleGenerativeAI = new GoogleGenerativeAI(API_KEY);
 const model: GenerativeModel = genAI.getGenerativeModel({ model: 'gemini-pro' });
 let chat: ChatSession | null = null;

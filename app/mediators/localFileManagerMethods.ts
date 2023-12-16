@@ -23,7 +23,7 @@ const getFileContents = (filePath: string): string => {
 
 const writeFileContents = (filePath: string, fileContents: string): void => {
   try {
-    fs.writeFileSync(filePath, fileContents);
+    fs.writeFileSync(filePath, fileContents.split('\n').slice(1, -1).join('\n'));
   } catch (error) {
     console.error(`Error writing file: ${filePath}`, error);
   }

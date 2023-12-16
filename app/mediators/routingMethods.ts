@@ -1,7 +1,9 @@
 'use client';
 import { useRouter } from 'next/navigation';
 
-const HandleOnClickRoute = ({ route, id }: { route: string, id: number }) => {
+type ReturnType = () => void;
+
+const HandleOnClickRoute = ({ route, id }: { route: string, id: number }): ReturnType => {
   const router = useRouter();
 
   return () => {

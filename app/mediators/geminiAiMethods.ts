@@ -1,5 +1,6 @@
 import { type ChatSession, type EnhancedGenerateContentResponse, type GenerateContentResult, type GenerativeModel, GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from '@google/generative-ai';
 
+const API_KEY = process.env.JAR_EL_API_KEY ?? '';
 const genAI: GoogleGenerativeAI = new GoogleGenerativeAI(API_KEY);
 const model: GenerativeModel = genAI.getGenerativeModel({ model: 'gemini-pro' });
 let chat: ChatSession | null = null;
@@ -58,7 +59,7 @@ const run = (): void => {
       },
       {
         role: 'user',
-        parts: [{ text: 'You always put JSDoc at the top of the codes you own that consists of @author, @description, all the @param, @returns, and @example. You add all the nessasary types in your typescript.' }]
+        parts: [{ text: 'You always put JSDoc at the top of the codes you own that consists of @author, @description, all the @param, @returns, and @example.' }]
       },
       {
         role: 'model',

@@ -5,7 +5,7 @@ import ProductCardBuilder from '../builders/ProductCardBuilder';
 import React, { type ReactNode } from 'react';
 
 /**
- * @author Jar-El
+ * @author Jor-El
  * @description HomePageBuilder is a React component that assembles the homepage of the Monkey Facade website.
  * @returns A React component.
  * @example

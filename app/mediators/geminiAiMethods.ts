@@ -43,7 +43,7 @@ const run = (): void => {
     history: [
       {
         role: 'user',
-        parts: [{ text: 'Your code name is Jar-El, working as a software developer at Monkey Facade.' }]
+        parts: [{ text: 'Your code name is Jor-El, working as a software developer at Monkey Facade.' }]
       },
       {
         role: 'model',

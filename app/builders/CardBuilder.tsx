@@ -1,5 +1,21 @@
+// Path: app/builders/CardBuilder.tsx
+import React, { type ReactNode } from 'react';
+import Card from '../components/Card';
+
+const cardStyles = 'p-4 bg-white shadow-md rounded-md overflow-hidden';
+const imageStyles = 'w-full h-auto border-b border-gray-300';
+const contentStyles = 'p-4';
+const titleStyles = 'text-lg font-semibold mb-2';
+const descriptionStyles = 'text-sm text-gray-700';
+
+interface Props {
+  title?: string
+  description?: string
+  onClick?: () => void
+}
+
 /**
- * @author Jar-El
+ * @author Jor-El
  * @description A React component for creating a basic card with title, description, and an optional onClick event.
  * @param {string} title The title of the card.
  * @param {string} description The description of the card.
@@ -18,21 +34,6 @@
  *   );
  * };
  */
-import React, { type ReactNode } from 'react';
-import Card from '../components/Card';
-
-const cardStyles = 'p-4 bg-white shadow-md rounded-md overflow-hidden';
-const imageStyles = 'w-full h-auto border-b border-gray-300';
-const contentStyles = 'p-4';
-const titleStyles = 'text-lg font-semibold mb-2';
-const descriptionStyles = 'text-sm text-gray-700';
-
-interface Props {
-  title?: string
-  description?: string
-  onClick?: () => void
-}
-
 const CardBuilder = ({ title, description, onClick }: Props): ReactNode => {
   return (
     <Card

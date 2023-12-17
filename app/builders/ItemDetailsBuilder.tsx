@@ -8,6 +8,14 @@ interface Props {
   id: string
 }
 
+/**
+ * @author Jor-El
+ * @description This component renders the details of an individual item.
+ * @param {string} id The unique identifier of the item.
+ * @returns {ReactNode} The ItemDetails component.
+ * @example
+ * const ItemDetailsComponent = ItemDetailsBuilder({ id: '12345' });
+ */
 const ItemDetailsBuilder = ({ id }: Props): ReactNode => {
   const handleAddProduct = (): void => { addProduct({ id, quantity: 1 }); };
 

@@ -8,8 +8,6 @@ interface AddToCartButtonBuilderProps {
   type: 'module' | 'tailwind' | 'daisyui'
 };
 
-const handleAddProduct = (): void => { addProduct({ id: 'abc', quantity: 1 }); };
-
 /**
  * @author Jor-El
  * @description This component renders the Add To Cart button for a product.
@@ -43,6 +41,8 @@ const AddToCartButtonBuilder = ({ type }: AddToCartButtonBuilderProps): ReactNod
   } else if (type === 'daisyui') {
     className = 'btn btn-primary btn-lg';
   }
+
+  const handleAddProduct = (): void => { addProduct({ id: 'abc', quantity: 1 }); };
 
   return <AddToCartButton className={className} onClick={handleAddProduct} />;
 };

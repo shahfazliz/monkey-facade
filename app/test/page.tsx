@@ -19,15 +19,20 @@ const ROOT_FOLDER = './app';
 const TestPage = async (): Promise<JSX.Element> => {
   const fileNames: string[] = getListOfFiles(ROOT_FOLDER);
   console.log(fileNames);
-  const filePath: string = path.join(ROOT_FOLDER, fileNames[1]);
-  const fileContents: string = getFileContents(filePath);
 
-  setCodes(fileContents);
-  const firstResponse: string = await sendMessage(`re write the file with Path:${filePath} you own by adding the JSDoc at the top of your component. update the JSDoc if there is code change. please do not remove imports. respond with only the codes`);
-  console.log(firstResponse);
-  writeFileContents(filePath, firstResponse);
+  // eslint-disable-next-line @typescript-eslint/no-misused-promises
+  fileNames.forEach(async (fileName: string, index: number) => {
+    if (index >= 5) {
+      const filePath: string = path.join(ROOT_FOLDER, fileName);
+      const fileContents: string = getFileContents(filePath);
+      setCodes(fileContents);
+      const firstResponse: string = await sendMessage(`re write the file with Path:${filePath} you own by adding the JSDoc at the top of your component. update the JSDoc if there is code change. please do not remove imports. respond with only the codes`);
+      console.log(firstResponse);
+      writeFileContents(filePath, firstResponse);
+    }
+  });
 
-  return <textarea style={{ width: 800, height: 600 }} defaultValue={fileContents} />;
+  return <textarea style={{ width: 800, height: 600 }} />;
 };
 
 export default TestPage;

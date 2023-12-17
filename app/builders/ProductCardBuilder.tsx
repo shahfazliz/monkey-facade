@@ -1,6 +1,6 @@
 // Path: app/builders/ProductCardBuilder.tsx
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { type ReactNode, useEffect, useState } from 'react';
 import AddToCartButtonBuilder from './AddToCartButtonBuilder';
 import ProductCard from '../components/ProductCard';
 
@@ -8,7 +8,13 @@ const Button1: JSX.Element = <AddToCartButtonBuilder type='module' />;
 const Button2: JSX.Element = <AddToCartButtonBuilder type='tailwind' />;
 const Button3: JSX.Element = <AddToCartButtonBuilder type='daisyui' />;
 
-const ProductCardBuilder = (): JSX.Element => {
+/**
+ * @author Jor-El
+ * @description A builder function that creates a ProductCard component.
+ * @returns {ReactNode} The ProductCard component.
+ * @example
+ */
+const ProductCardBuilder = (): ReactNode => {
   const [buttonState, setButtonState] = useState<JSX.Element | undefined>(undefined);
 
   useEffect(() => {

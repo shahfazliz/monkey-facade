@@ -1,3 +1,4 @@
+// Path: app/mediators/geminiAiMethods.ts
 import { type ChatSession, type EnhancedGenerateContentResponse, type GenerateContentResult, type GenerativeModel, GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from '@google/generative-ai';
 
 const API_KEY = process.env.JAR_EL_API_KEY ?? '';

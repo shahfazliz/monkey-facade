@@ -1,15 +1,16 @@
-import { ReactNode } from 'react';
+// Path: app/item_details/[id]/page.tsx
+import React, { type ReactNode } from 'react';
 import ItemDetailsBuilder from '../../builders/ItemDetailsBuilder';
 
 interface Props {
   params: {
-    id: string;
-  };
+    id: string
+  }
   // searchParams: any;
 }
 
 const ItemDetailsPage = ({ params }: Props): ReactNode => {
-  return <ItemDetailsBuilder id={params.id} />
+  return <ItemDetailsBuilder id={params.id} />;
 };
 
 export default ItemDetailsPage;

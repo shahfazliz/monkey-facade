@@ -1,9 +1,11 @@
-import Link from 'next/link'
+// Path: app/builders/NavBuilder.tsx
+import Link from 'next/link';
+import React, { type ReactNode } from 'react';
 
-const NavBuilder = () => {
+const NavBuilder = (): ReactNode => {
   return (<nav>
     <Link href='/users'>Users</Link>
-  </nav>)
-}
+  </nav>);
+};
 
 export default NavBuilder;

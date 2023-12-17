@@ -1,3 +1,4 @@
+// Path: app/mediators/routingMethods.ts
 'use client';
 import { useRouter } from 'next/navigation';
 

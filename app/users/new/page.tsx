@@ -1,9 +1,10 @@
-import React from 'react'
+// Path: app/users/new/page.tsx
+import React, { type ReactNode } from 'react';
 
-const NewUserPage = () => {
+const NewUserPage = (): ReactNode => {
   return (
     <div>NewUserPage</div>
-  )
-}
+  );
+};
 
 export default NewUserPage;

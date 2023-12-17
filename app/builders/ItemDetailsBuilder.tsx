@@ -1,3 +1,4 @@
+// Path: app/builders/ItemDetailsBuilder.tsx
 'use client';
 import { addProduct } from '../mediators/shoppingCartMethods';
 import React, { type ReactNode } from 'react';

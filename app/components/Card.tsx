@@ -1,16 +1,17 @@
+// Path: app/components/Card.tsx
 import Image from 'next/image';
-import { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { imagePlaceholderLoader } from '../mediators/imageLoaderMethods';
 
 interface Props {
-  cardStyles?: string;
-  imageStyles?: string;
-  contentStyles?: string;
-  titleStyles?: string;
-  descriptionStyles?: string;
-  title?: string;
-  description?: string;
-  onClick?: () => void;
+  cardStyles?: string
+  imageStyles?: string
+  contentStyles?: string
+  titleStyles?: string
+  descriptionStyles?: string
+  title?: string
+  description?: string
+  onClick?: () => void
 }
 
 const Card = ({
@@ -21,7 +22,7 @@ const Card = ({
   descriptionStyles,
   title,
   description,
-  onClick,
+  onClick
 }: Props): ReactNode => {
   return (
     <div className={cardStyles} onClick={onClick}>

@@ -1,15 +1,16 @@
+// Path: app/components/ItemDetails.tsx
 'use client';
 import Image from 'next/image';
 import { imagePlaceholderLoader } from '../mediators/imageLoaderMethods';
-import { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import Slider from '../adapters/Slider';
 
 interface Props {
-  title: string;
-  description: string;
-  images: string[];
-  price: number;
-  onClick: () => void;
+  title: string
+  description: string
+  images: string[]
+  price: number
+  onClick: () => void
 }
 
 const ItemDetails = ({ title, description, images, price, onClick }: Props): ReactNode => {
@@ -36,7 +37,7 @@ const ItemDetails = ({ title, description, images, price, onClick }: Props): Rea
       <div>
         <h1 className="text-3xl font-semibold mb-4">{title}</h1>
         <p className="text-gray-600 mb-4">{description}</p>
-        
+
         <p className="text-xl font-bold mb-4">Price: ${price}</p>
 
         <button className="bg-blue-500 text-white px-4 py-2 mr-4 hover:bg-blue-700" onClick={onClick}>Add to Cart</button>

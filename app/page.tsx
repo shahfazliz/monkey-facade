@@ -1,3 +1,4 @@
+// Path: app/page.tsx
 import React, { type ReactNode } from 'react';
 import HomePageBuilder from './builders/HomePageBuilder';
 

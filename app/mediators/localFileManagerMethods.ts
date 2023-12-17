@@ -1,3 +1,4 @@
+// Path: app/mediators/localFileManagerMethods.ts
 import { ALLOWED_APP_FILES_EXTENSIONS } from '../config';
 import { glob } from 'glob';
 import fs from 'fs';

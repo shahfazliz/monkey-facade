@@ -1,4 +1,4 @@
-// Path: app/builders/addToCartButtonBuilder.tsx
+// Path: app/builders/AddToCartButtonBuilder.tsx
 import { addProduct } from '../mediators/shoppingCartMethods';
 import AddToCartButton from '../components/AddToCart';
 import styles from '../components/ProductCard.module.css';

@@ -1,10 +1,13 @@
-type ProductCardProps = {
-  Button1?: JSX.Element;
-  Button2?: JSX.Element;
-  Button3?: JSX.Element;
-};
+// Path: app/components/ProductCard.tsx
+import React, { type ReactNode } from 'react';
 
-const ProductCard = ({ Button1, Button2, Button3 }: ProductCardProps) => {
+interface ProductCardProps {
+  Button1?: ReactNode
+  Button2?: ReactNode
+  Button3?: ReactNode
+}
+
+const ProductCard = ({ Button1, Button2, Button3 }: ProductCardProps): ReactNode => {
   return (
     <>
       {Button1}

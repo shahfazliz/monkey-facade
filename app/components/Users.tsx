@@ -1,10 +1,12 @@
-import { User } from "../types/userType";
+// Path: app/components/Users.tsx
+import React from 'react';
+import { type User } from '../types/userType';
 
-type UsersProps = {
-  users: Array<User>
-};
+interface UsersProps {
+  users: User[]
+}
 
-const Users = async ({ users }: UsersProps) => {
+const Users = async ({ users }: UsersProps): Promise<JSX.Element> => {
   return (<>
     <div>Users</div>
     <ul>

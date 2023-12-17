@@ -13,9 +13,26 @@ interface Props {
 
 export const metadata: Metadata = {
   title: APP_NAME,
-  description: APP_DESCRIPTION
+  description: APP_DESCRIPTION,
 };
 
+/**
+ * @author Jor-El
+ * @description Root layout for the application.
+ * @param {ReactNode} children - The content to be rendered inside the layout.
+ * @returns {ReactNode} - The root layout component.
+ * @example
+ *
+ * const MyApp = () => {
+ *   return (
+ *     <RootLayout>
+ *       <Header />
+ *       <Main />
+ *       <Footer />
+ *     </RootLayout>
+ *   );
+ * }
+ */
 const RootLayout = ({ children }: Props): ReactNode => {
   return (
     <html lang="en">

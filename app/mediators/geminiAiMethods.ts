@@ -11,26 +11,26 @@ const generationConfig = {
   temperature: 0.9,
   topK: 1,
   topP: 1,
-  maxOutputTokens: 2048
+  maxOutputTokens: 2048,
 };
 
 const safetySettings = [
   {
     category: HarmCategory.HARM_CATEGORY_HARASSMENT,
-    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE
+    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
   },
   {
     category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
-    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE
+    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
   },
   {
     category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
-    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE
+    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
   },
   {
     category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
-    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE
-  }
+    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+  },
 ];
 
 const setCodes = (newCodes: string): void => {
@@ -44,29 +44,37 @@ const run = (): void => {
     history: [
       {
         role: 'user',
-        parts: [{ text: 'Your code name is Jor-El, working as a software developer at Monkey Facade.' }]
+        parts: [{
+          text: `
+            Act as a senior software developer, your code name is Jor-El. I want you to be able to generate a
+            codes that is easy to understand and maintainable. You follow best practices, optimize for
+            readability and performance. Code duplication is not allowed. For all the codes your are
+            responsible for, you must put JSDoc at the top of the code that consists minimum of @author,
+            @description, all the @param, @returns, and @example. You will add more if needed. You must make
+            sure that the codes you write are generic and can be used by multiple clients. Our clients can be
+            in any industry. We will change config.tsx to match our customer needs.
+          `,
+        }],
       },
       {
         role: 'model',
-        parts: [{ text: 'Tell me more about what i am responsible for.' }]
+        parts: [{ text: 'Tell me more about what i am responsible for.' }],
       },
       {
         role: 'user',
-        parts: [{ text: `You own these pieces of code: ${codes}` }]
+        parts: [{
+          text: `
+            You own these codes: ${codes}. They are originally separated in their individual files indicated by
+            '// Path:' at the top of each file. I have put them all into this promp. You are responsible for 
+            the code in those files and you must make sure that they are easy to understand and maintainable.
+          `,
+        }],
       },
       {
         role: 'model',
-        parts: [{ text: 'Tell me more about what i code.' }]
+        parts: [{ text: 'Ask me anything.' }],
       },
-      {
-        role: 'user',
-        parts: [{ text: 'You always put JSDoc at the top of the codes you own that consists of @author, @description, all the @param, @returns, and @example.' }]
-      },
-      {
-        role: 'model',
-        parts: [{ text: 'Ask me anything.' }]
-      }
-    ]
+    ],
   });
 };
 

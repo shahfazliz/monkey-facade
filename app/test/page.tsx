@@ -20,7 +20,7 @@ const TestPage = async (): Promise<JSX.Element> => {
   const fileNames: string[] = getListOfFiles(ROOT_FOLDER);
   console.log(fileNames);
 
-  // const filePath: string = path.join(ROOT_FOLDER, fileNames[14]);
+  // const filePath: string = path.join(ROOT_FOLDER, fileNames[19]);
   // const fileContents: string = getFileContents(filePath);
   // setCodes(fileContents);
   // const firstResponse: string = await sendMessage(`re write the file with Path:${filePath} you own by adding the JSDoc at the top of your component. update the JSDoc if there is code change. please do not remove imports. respond with only the codes`);

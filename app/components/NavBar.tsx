@@ -6,6 +6,23 @@ interface Props {
   children: ReactNode[]
 };
 
+/**
+ * @author Jor-El
+ * @description A simple navigation bar for the application.
+ *
+ * @param title The title of the navigation bar.
+ * @param children The children of the navigation bar.
+ *
+ * @returns The navigation bar.
+ *
+ * @example
+ * const navBar = (
+ *   <NavBar title="My App">
+ *     <a href="/">Home</a>
+ *     <a href="/about">About</a>
+ *   </NavBar>
+ * );
+ */
 const NavBar = ({ children, title }: Props): ReactNode => {
   return (
     <div className="navbar bg-base-100">

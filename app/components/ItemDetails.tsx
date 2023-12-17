@@ -13,6 +13,27 @@ interface Props {
   onClick: () => void
 }
 
+/**
+ * @author Jor-El
+ * @description Displays the details of an item, including title, description, images, price, and an "Add to Cart" button.
+ * @param title The title of the item.
+ * @param description The description of the item.
+ * @param images An array of image URLs for the item.
+ * @param price The price of the item.
+ * @param onClick A callback function to be executed when the "Add to Cart" button is clicked.
+ * @returns A React component that renders the item details.
+ * @example
+ * ```
+ * <ItemDetails
+ *   title="My Awesome Product"
+ *   description="This is a really great product that you should buy."
+ *   images={['/image1.jpg', '/image2.jpg', '/image3.jpg']}
+ *   price={100}
+ *   onClick={() => { console.log('Clicked!'); }}
+ * />
+ * ```
+ */
+
 const ItemDetails = ({ title, description, images, price, onClick }: Props): ReactNode => {
   return (
     <div className="max-w-10xl mx-auto p-6 bg-white shadow-lg rounded-lg flex">

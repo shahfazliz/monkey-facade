@@ -1,4 +1,3 @@
-// Path: app/layout.tsx
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -18,6 +17,7 @@ export const metadata: Metadata = {
 
 /**
  * @author Jor-El
+ * @module app/layout.tsx
  * @description Root layout for the application.
  * @param {ReactNode} children - The content to be rendered inside the layout.
  * @returns {ReactNode} - The root layout component.

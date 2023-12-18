@@ -1,4 +1,3 @@
-// Path: app/components/Users.tsx
 import React from 'react';
 import { type User } from '../types/userType';
 
@@ -8,6 +7,7 @@ interface Props {
 
 /**
  * @author Jor-El
+ * @module app/components/Users.tsx
  * @description Displays a list of users.
  * @param {UsersProps} props Component properties.
  * @param {User[]} props.users An array of users.

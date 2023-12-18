@@ -1,4 +1,3 @@
-// Path: app/proxies/userProxy.ts
 import type { User } from '../types/userType';
 
 /**

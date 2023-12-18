@@ -1,4 +1,3 @@
-// Path: app/adapters/Slider.tsx
 import React, { type ReactNode, useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
@@ -8,6 +7,7 @@ interface Props {
 
 /**
  * @author Shahfazliz Shahron
+ * @module app/adapters/Slider.tsx
  * @props {React.ReactNode[]} children - An array of React elements to be displayed in the slider.
  * @description This component displays a horizontal slider for navigating through a sequence of child elements. Users can navigate through the children using the left and right arrow buttons. The current child is highlighted in the slider.
  * @returns {React.ComponentElement} A React component that renders the slider with navigation controls.

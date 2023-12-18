@@ -1,4 +1,3 @@
-// Path: app/components/ItemDetails.tsx
 'use client';
 import Image from 'next/image';
 import { imagePlaceholderLoader } from '../mediators/imageLoaderMethods';
@@ -15,6 +14,7 @@ interface Props {
 
 /**
  * @author Jor-El
+ * @module app/components/ItemDetails.tsx
  * @description Displays the details of an item, including title, description, images, price, and an "Add to Cart" button.
  * @param title The title of the item.
  * @param description The description of the item.

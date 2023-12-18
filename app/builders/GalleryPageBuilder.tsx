@@ -1,4 +1,3 @@
-// Path: app/builders/GalleryPageBuilder.tsx
 'use client';
 import React, { type ReactNode } from 'react';
 import Gallery from '../components/Gallery';
@@ -10,6 +9,7 @@ const galleryStyles = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4';
 
 /**
  * @author Jor-El
+ * @module app/builders/GalleryPageBuilder.tsx
  * @description Component that builds a gallery of cards.
  * @param {string} galleryStyles - The styles to be applied to the gallery.
  * @returns {ReactNode} - The gallery component.

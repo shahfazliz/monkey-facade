@@ -1,4 +1,3 @@
-// Path: app/builders/ProductCardBuilder.tsx
 'use client';
 import React, { type ReactNode, useEffect, useState } from 'react';
 import AddToCartButtonBuilder from './AddToCartButtonBuilder';
@@ -10,6 +9,7 @@ const Button3: JSX.Element = <AddToCartButtonBuilder type='daisyui' />;
 
 /**
  * @author Jor-El
+ * @module app/builders/ProductCardBuilder.tsx
  * @description A builder function that creates a ProductCard component.
  * @returns {ReactNode} The ProductCard component.
  * @example

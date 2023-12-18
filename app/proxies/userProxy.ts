@@ -1,6 +1,9 @@
 // Path: app/proxies/userProxy.ts
 import type { User } from '../types/userType';
 
+/**
+ * @module app/proxies/userProxy.ts
+ */
 const fetchUsers = async (): Promise<User[]> => {
   // Services can come from anywhere, so we need to import them dynamically
   // maybe some logic to use other service here

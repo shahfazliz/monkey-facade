@@ -1,4 +1,3 @@
-// Path: app/builders/ItemDetailsBuilder.tsx
 'use client';
 import { addProduct } from '../mediators/shoppingCartMethods';
 import React, { type ReactNode } from 'react';
@@ -10,6 +9,7 @@ interface Props {
 
 /**
  * @author Jor-El
+ * @module app/builders/ItemDetailsBuilder.tsx
  * @description This component renders the details of an individual item.
  * @param {string} id The unique identifier of the item.
  * @returns {ReactNode} The ItemDetails component.

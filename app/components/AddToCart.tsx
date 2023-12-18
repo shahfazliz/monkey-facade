@@ -1,4 +1,3 @@
-// Path: app/components/AddToCart.tsx
 import React, { type ReactNode } from 'react';
 
 interface AddToCartButtonType {
@@ -8,6 +7,7 @@ interface AddToCartButtonType {
 
 /**
  * @author Jor-El
+ * @module app/components/AddToCart.tsx
  * @description This component renders a button that adds a product to the shopping cart.
  * @param {className} className The class name to apply to the button.
  * @param {onClick} onClick The function to call when the button is clicked.

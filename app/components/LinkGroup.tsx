@@ -1,4 +1,3 @@
-// Path: app/components/LinkGroup.tsx
 import React, { type ReactNode } from 'react';
 
 interface Props {
@@ -8,6 +7,7 @@ interface Props {
 
 /**
  * @author Jor-El
+ * @module app/components/LinkGroup.tsx
  * @description This component renders a group of links with a title.
  * @param {string} title The title of the group.
  * @param {ReactNode[]} children The links to be rendered.

@@ -1,6 +1,6 @@
-// Path: app/config.ts
 /**
  * @author Jor-El
+ * @module app/config.ts
  * @description This file contains constants and variables used across the application.
  * @param {string[]} ALLOWED_APP_FILES_EXTENSIONS List of allowed file extensions for the application to modify.
  * @param {string} APP_DESCRIPTION Description of the application.

@@ -1,4 +1,3 @@
-// Path: app/components/Gallery.tsx
 import React, { type ReactNode } from 'react';
 
 interface Props {
@@ -8,6 +7,7 @@ interface Props {
 
 /**
  * @author Jor-El
+ * @module app/components/Gallery.tsx
  * @description Functional React component that displays a gallery of components.
  * @param {ReactNode} children The components to display in the gallery.
  * @param {string} galleryStyles The CSS class to apply to the gallery.

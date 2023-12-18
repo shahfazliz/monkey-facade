@@ -1,4 +1,3 @@
-// Path: app/item_details/[id]/page.tsx
 import React, { type ReactNode } from 'react';
 import ItemDetailsBuilder from '../../builders/ItemDetailsBuilder';
 
@@ -11,6 +10,7 @@ interface Props {
 
 /**
  * @author Jor-El
+ * @module app/item_details/[id]/page.tsx
  * @description This component renders the item details page.
  * @param {string} props.params.id The item ID.
  * @returns {ReactNode} The React component.

@@ -1,4 +1,3 @@
-// Path: app/builders/AddToCartButtonBuilder.tsx
 import { addProduct } from '../mediators/shoppingCartMethods';
 import AddToCartButton from '../components/AddToCart';
 import styles from '../components/ProductCard.module.css';
@@ -10,6 +9,7 @@ interface AddToCartButtonBuilderProps {
 
 /**
  * @author Jor-El
+ * @module app/builders/AddToCartButtonBuilder.tsx
  * @description This component renders the Add To Cart button for a product.
  * It takes a `type` prop which can be one of the following:
  * - `module`: Uses the styles from the `ProductCard` module.

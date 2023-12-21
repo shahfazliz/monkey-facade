@@ -1,3 +1,4 @@
+import { load } from 'https://deno.land/std@0.209.0/dotenv/mod.ts';
 import {
   type ChatSession,
   type EnhancedGenerateContentResponse,
@@ -7,6 +8,7 @@ import {
   HarmBlockThreshold,
   HarmCategory,
 } from '@google/generative-ai';
+import process from 'node:process';
 
 /**
  * @author Jor-El
@@ -42,7 +44,8 @@ import {
  * ```
  */
 
-const API_KEY = process.env.JAR_EL_API_KEY ?? '';
+const env = await load();
+const API_KEY: string = env.JAR_EL_API_KEY ?? '';
 const genAI: GoogleGenerativeAI = new GoogleGenerativeAI(API_KEY);
 const model: GenerativeModel = genAI.getGenerativeModel({ model: 'gemini-pro' });
 let chat: ChatSession | null = null;

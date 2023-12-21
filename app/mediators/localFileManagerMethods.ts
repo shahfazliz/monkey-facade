@@ -1,6 +1,6 @@
-import { ALLOWED_APP_FILES_EXTENSIONS } from '../config';
+import { ALLOWED_APP_FILES_EXTENSIONS } from '../config.ts';
 import { glob } from 'glob';
-import fs from 'fs';
+import fs from 'node:fs';
 
 /**
  * @author Jor-El

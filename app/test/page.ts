@@ -22,5 +22,4 @@ const TestPage = async (): Promise<void> => {
   writeFileContents(filePath, firstResponse);
 };
 
-// export default TestPage;
 await TestPage();

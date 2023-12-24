@@ -35,12 +35,11 @@ const TestPage = async (): Promise<void> => {
 
   while (true) {
     const question: string | null = prompt('\nQ: ');
-    switch (question) {
-      case null:
-        continue;
-      case 'exit':
-        console.log('Bye!');
-        break;
+    if (question === null) {
+      continue;
+    } else if (question === 'exit') {
+      console.log('Bye!');
+      break;
     }
     const response: string = await sendMessage(question);
     console.log(`A:\n${response}\n`);

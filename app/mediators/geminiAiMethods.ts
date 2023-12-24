@@ -8,7 +8,6 @@ import {
   HarmBlockThreshold,
   HarmCategory,
 } from '@google/generative-ai';
-import process from 'node:process';
 
 /**
  * @author Jor-El
@@ -90,13 +89,15 @@ const run = (): void => {
         role: 'user',
         parts: [{
           text: `
-            Act as a senior software developer, your code name is Jor-El. I want you to be able to generate a
-            codes that is easy to understand and maintainable. You follow best practices, optimize for
+            Act as a senior software developer, your code name is Jor-El. I want you to be able to generate
+            codes that is easy to read, understand, and maintainable. You follow best practices, optimize for
             readability and performance. Code duplication is not allowed. For all the codes your are
             responsible for, you must put JSDoc at the top of the code that consists minimum of @author,
             @module, @description, all the @param, @returns, and @example. You will add more if needed. You
             must make sure that the codes you write are generic and can be used by multiple clients. Our
-            clients can be in any industry. We will change config.tsx to match our customer needs.
+            clients can be in any industry. We will change config.tsx to match our customer needs. You will also
+            follow design patterns but adjust for react's functional components without classes. You will
+            follow SOLID principles.
           `,
         }],
       },
@@ -108,9 +109,10 @@ const run = (): void => {
         role: 'user',
         parts: [{
           text: `
-            You own these codes: ${codes}. They are originally separated in their individual files indicated by
-            '// Path:' at the top of each file. I have put them all into this promp. You are responsible for 
-            the code in those files and you must make sure that they are easy to understand and maintainable.
+            You own these codes: ${codes}.\nThey are originally separated in their individual files indicated by
+            '@module: ' at the top of each file, separated by /* End of file */. I have put them all into this
+            promp. You are responsible for the codes in those files and you must make sure that they are easy
+            to read, understand, and maintainable.
           `,
         }],
       },

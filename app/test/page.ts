@@ -1,5 +1,6 @@
 import { getListOfFiles, getFileContents } from '../mediators/localFileManagerMethods.ts';
-import { sendMessage, setCodes } from '../mediators/geminiAiMethods.ts';
+// import { sendMessage, setCodes } from '../mediators/geminiAiMethods.ts';
+import { sendMessage, setCodes } from '../mediators/dolphinMixtralAiMethods.ts';
 import path from 'node:path';
 
 const ROOT_FOLDER = './app';

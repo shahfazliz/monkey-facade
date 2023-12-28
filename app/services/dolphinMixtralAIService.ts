@@ -40,23 +40,13 @@ const postRequest = async (messages: Message[]): Promise<globalThis.Response> =>
 };
 
 const startChat = async ({ history }: StartChatProps): Promise<MixtralResponse> => {
-  const response = await postRequest([
-    {
-      role: 'user',
-      content: JSON.stringify(history),
-    },
-  ]);
+  const response = await postRequest(history);
 
   return await response.json();
 };
 
-const sendMessage = async (text: string): Promise<MixtralResponse> => {
-  const response = await postRequest([
-    {
-      role: 'user',
-      content: text,
-    },
-  ]);
+const sendMessage = async (newHistory: Message[]): Promise<MixtralResponse> => {
+  const response = await postRequest(newHistory);
 
   return await response.json();
 };

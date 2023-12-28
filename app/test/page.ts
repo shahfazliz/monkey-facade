@@ -1,9 +1,11 @@
 import { getListOfFiles, getFileContents } from '../mediators/localFileManagerMethods.ts';
 // import { sendMessage, setCodes } from '../mediators/geminiAiMethods.ts';
-import { sendMessage, setCodes } from '../mediators/dolphinMixtralAiMethods.ts';
+import { sendMessage, setCodes, startChatService } from '../mediators/dolphinMixtralAiMethods.ts';
 import path from 'node:path';
 
 const ROOT_FOLDER = './app';
+
+let contextInitilized: boolean = false;
 
 /**
  * @author Shahfazliz Shahron
@@ -25,16 +27,24 @@ const TestPage = async (): Promise<void> => {
   // writeFileContents(filePath, firstResponse);
 
   /* Test knowledge of the files */
-  const fileContents: string = fileNames
-    .map((fileName) => getFileContents(path.join(ROOT_FOLDER, fileName)))
-    .join('\n\n/* End of file */\n\n');
-  setCodes(fileContents);
+  // const fileContents: string = fileNames
+  //   .map((fileName) => getFileContents(path.join(ROOT_FOLDER, fileName)))
+  //   .join('\n\n/* End of file */\n\n');
+  // setCodes(fileContents);
   // const firstResponse: string = await sendMessage('how many files are you responsible for?');
   // console.log(firstResponse);
   // const secondResponse: string = await sendMessage('what are their file paths?');
   // console.log(secondResponse);
 
+  const fileContents: string = getFileContents(path.join(ROOT_FOLDER, fileNames[0]));
+  setCodes(fileContents);
+
   while (true) {
+    if (!contextInitilized) {
+      console.log('Initializing context...');
+      await startChatService();
+      contextInitilized = true;
+    }
     const question: string | null = prompt('\nQ: ');
     if (question === null) {
       continue;

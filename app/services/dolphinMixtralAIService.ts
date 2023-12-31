@@ -23,7 +23,7 @@ export interface MixtralResponse {
   eval_duration: number
 }
 
-const model = 'dolphin-mixtral:8x7b-v2.5-q3_K_M';
+const model = 'dolphin-mixtral:8x7b-v2.6-q3_K_M';
 
 const postRequest = async (messages: Message[]): Promise<globalThis.Response> => {
   return await fetch('http://localhost:11434/api/chat', {

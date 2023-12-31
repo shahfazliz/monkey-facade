@@ -1,4 +1,11 @@
 {
     "editor.tabSize": 2,
-    "workbench.tree.indent": 15
-}
+    "workbench.tree.indent": 15,
+    "cssVariables.lookupFiles": [
+      "**/*.css",
+      "**/*.scss",
+      "**/*.sass",
+      "**/*.less",
+      "node_modules/@mantine/core/styles.css"
+    ]
+  }

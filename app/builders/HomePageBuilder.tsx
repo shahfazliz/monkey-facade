@@ -1,4 +1,9 @@
+'use client';
+import { APP_NAME } from '../config';
+import { Navbar, Main } from '../adapters/AppShellAdapter';
+import AppShellBuilder from './AppShellBuilder';
 import GalleryPageBuilder from '../builders/GalleryPageBuilder';
+import HeaderBuilder from './HeaderBuilder';
 import NavBuilder from '../builders/NavBuilder';
 import ProductCardBuilder from '../builders/ProductCardBuilder';
 import React, { type ReactNode } from 'react';
@@ -13,11 +18,16 @@ import React, { type ReactNode } from 'react';
  */
 const HomePageBuilder = (): ReactNode => {
   return (
-    <main>
-      <NavBuilder />
-      <ProductCardBuilder />
-      <GalleryPageBuilder />
-    </main>
+    <AppShellBuilder>
+      <HeaderBuilder>{APP_NAME}</HeaderBuilder>
+      <Navbar>
+        <NavBuilder />
+      </Navbar>
+      <Main>
+        <ProductCardBuilder />
+        <GalleryPageBuilder />
+      </Main>
+    </AppShellBuilder>
   );
 };
 

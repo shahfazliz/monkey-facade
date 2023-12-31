@@ -1,12 +1,10 @@
-// Path: app/builders/NavBuilder.tsx
+import { NavLink } from '@mantine/core';
 import Link from 'next/link';
-import NavBar from '../components/NavBar';
 import React, { type ReactNode } from 'react';
-import LinkGroup from '../components/LinkGroup';
-import { APP_NAME } from '../config';
 
 /**
  * @author Jor-El
+ * @module app/builders/NavBuilder.tsx
  * @description This component renders the navigation bar for the application.
  * @returns {ReactNode} The navigation bar component.
  * @example
@@ -14,13 +12,14 @@ import { APP_NAME } from '../config';
  */
 const NavBuilder = (): ReactNode => {
   return (
-    <NavBar title={APP_NAME}>
-      <Link href='/users'>Users</Link>
-      <LinkGroup title='Products'>
-        <Link href='/products'>Products</Link>
-        <Link href='/products/add'>Add Product</Link>
-      </LinkGroup>
-    </NavBar>
+    <>
+      <NavLink href='/' label="Home" component={Link} />
+      <NavLink href='/users' label="Users" component={Link} />
+      <NavLink label='Products'>
+        <NavLink href='/products' label="Product List" component={Link} />
+        <NavLink href='/products/add'label="Add Product" component={Link} />
+      </NavLink>
+    </>
   );
 };
 

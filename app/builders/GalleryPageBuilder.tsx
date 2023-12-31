@@ -1,11 +1,12 @@
 'use client';
-import React, { type ReactNode } from 'react';
-import Gallery from '../components/Gallery';
-import CardBuilder from './CardBuilder';
+import { Flex } from '@mantine/core';
 import { handleOnClickRoute } from '../mediators/routingMethods';
+import CardBuilder from './CardBuilder';
+import React, { type ReactNode } from 'react';
 
 const CARD_NUMBER = 10;
-const galleryStyles = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4';
+
+const LOREM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl vitae aliquam tincidunt, nunc nisl aliquet nunc, vitae aliquam nisl nunc vitae nisl.';
 
 /**
  * @author Jor-El
@@ -30,20 +31,29 @@ const galleryStyles = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4';
  * </Gallery>
 */
 const GalleryPageBuilder = (): ReactNode => {
-  return <Gallery galleryStyles={galleryStyles}>
-    {
-      Array
-        .from(Array(CARD_NUMBER).keys())
-        .map((_, index) => (
-          <CardBuilder
-            key={index}
-            title='Card Title'
-            description='This is a simple card with some description.'
-            onClick={handleOnClickRoute({ route: '/item_details', id: index })}
-          />
-        ))
-    }
-  </Gallery>;
+  return (
+    <Flex
+      mih={50}
+      gap="md"
+      justify="flex-start"
+      align="flex-start"
+      direction="row"
+      wrap="wrap"
+    >
+      {
+        Array
+          .from(Array(CARD_NUMBER).keys())
+          .map((_, index) => (
+            <CardBuilder
+              key={index}
+              title='Card Title'
+              description={LOREM}
+              onClick={handleOnClickRoute({ route: '/item_details', id: index })}
+            />
+          ))
+      }
+    </Flex>
+  );
 };
 
 export default GalleryPageBuilder;

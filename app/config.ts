@@ -16,10 +16,14 @@ const ALLOWED_APP_FILES_EXTENSIONS = ['js', 'jsx', 'ts', 'tsx', 'json'];
 const APP_DESCRIPTION = 'Monkey Facade';
 const APP_NAME = 'Monkey Facade';
 const APP_VERSION = '1.0.0';
+const HEADER_HEIGHT = 60;
+const NAVBAR_WIDTH = 200;
 
 export {
   ALLOWED_APP_FILES_EXTENSIONS,
   APP_DESCRIPTION,
   APP_NAME,
   APP_VERSION,
+  HEADER_HEIGHT,
+  NAVBAR_WIDTH,
 };

@@ -1,6 +1,7 @@
 // Path: app/builders/CardBuilder.tsx
 import React, { type ReactNode } from 'react';
-import Card from '../components/Card';
+import { Card } from '../adapters/CardAdapter';
+import { imagePlaceholderLoader } from '../mediators/imageLoaderMethods';
 
 const cardStyles = 'p-4 bg-white shadow-md rounded-md overflow-hidden';
 const imageStyles = 'w-full h-auto border-b border-gray-300';
@@ -37,14 +38,14 @@ interface Props {
 const CardBuilder = ({ title, description, onClick }: Props): ReactNode => {
   return (
     <Card
-      cardStyles={cardStyles}
-      imageStyles={imageStyles}
-      contentStyles={contentStyles}
-      titleStyles={titleStyles}
-      descriptionStyles={descriptionStyles}
       title={title}
-      description={description}
+      description={`${description} ${description} ${description}`}
       onClick={onClick}
+      imageLoader={imagePlaceholderLoader}
+      imageAlt="Card Image"
+      src="img.jpg"
+      imageHeight={300 * 0.5}
+      width={300}
     />
   );
 };
